@@ -41,7 +41,7 @@ ohw_data = ohw(data)
 st.title('My Cool Name App')
 
 with st.sidebar:
-    input_name = st.text_input('Enter a name:')
+    input_name = st.text_input('Enter a name:', value='Jack')
     year_input = st.slider('Year', min_value=1880, max_value=2023, value=2000)
     n_names = st.radio('Number of names per sex', [3,5,10])
     if st.button('If you\'re happy and you know it, click this button!'):

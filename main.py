@@ -44,6 +44,11 @@ with st.sidebar:
     input_name = st.text_input('Enter a name:')
     year_input = st.slider('Year', min_value=1880, max_value=2023, value=2000)
     n_names = st.radio('Number of names per sex', [3,5,10])
+    if st.button('If you\'re happy and you know it click this button'):
+        st.write('You are Happy! Congrats')
+    else:
+        st.write('You are sad. Bummer :(')
+
 
 tab1, tab2, tab3 = st.tabs(["Names", "Years", "Trends"]) 
 with tab1: 
@@ -58,7 +63,7 @@ with tab2:
     st.plotly_chart(fig2)
 
     st.write('Unique Names Table')
-    output_table = unique_names_summary(data, 2000)
+    output_table = unique_names_summary(data, year=year_input)
     st.dataframe(output_table)
 
 with tab3:

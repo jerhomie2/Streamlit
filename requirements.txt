@@ -1,0 +1,8 @@
+numpy
+pandas
+zipfile
+plotly
+matplotlib
+requests
+streamlit
+io
